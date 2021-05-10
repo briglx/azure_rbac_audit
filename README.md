@@ -2,6 +2,17 @@ Audit Azure RBAC
 ----------------
 
 
+Dev Setup
+---------
+
+Build docker with
+
+docker build --pull --rm -f "dockerfile" -t azurerbacaudit:latest "."
+
+Run docker with 
+
+# Run interactive with environment variables
+> docker run --rm -it --env-file local.env azurerbacaudit:latest
 
 References
 ----------

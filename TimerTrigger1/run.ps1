@@ -24,7 +24,7 @@ Write-Host "PowerShell timer trigger function ran! TIME: $currentUTCtime"
 # Write-Host "My AZURE_TENANT_ID: $env:AZURE_TENANT_ID"
 # Write-Host "My AZURE_CLIENT_ID: $env:AZURE_CLIENT_ID"
 # Write-Host "My AZURE_CLIENT_SECRET: $env:AZURE_CLIENT_SECRET"
-
+get-azsubscription | set-azcontext
 write-host "1"
 write-host "$(get-azcontext | out-string)"
 write-host "2"
