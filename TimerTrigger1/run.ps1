@@ -14,6 +14,21 @@ Write-Host "PowerShell timer trigger function ran! TIME: $currentUTCtime"
 
 # Get the enviroment variables...
 # Verify credientials are passed
-get-variable $env* | out-host
+# gci $env:* | out-host
 
-Write-Host $Env:AZURE_SUBSCRIPTION_ID
+# write-host "$(get-childitem -path env:* | out-string)"
+
+# Write-host "$(get-psdrive )"
+
+# Write-Host "My subid is: $env:AZURE_SUBSCRIPTION_ID"
+# Write-Host "My AZURE_TENANT_ID: $env:AZURE_TENANT_ID"
+# Write-Host "My AZURE_CLIENT_ID: $env:AZURE_CLIENT_ID"
+# Write-Host "My AZURE_CLIENT_SECRET: $env:AZURE_CLIENT_SECRET"
+
+write-host "1"
+write-host "$(get-azcontext | out-string)"
+write-host "2"
+$results = get-azroleassignment
+write-output "`n$results"
+
+write-host "3"
